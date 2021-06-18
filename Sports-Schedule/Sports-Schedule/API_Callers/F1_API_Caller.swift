@@ -14,11 +14,30 @@ class F1ScheduleCaller {
         // '!' here means it will never be empty
         let url = URL(string: "http://ergast.com/api/f1/current.json")!
 
-        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
-            guard let data = data else { return }
-            print("The response is : ",String(data: data, encoding: .utf8)!)
-            //print(NSString(data: data, encoding: String.Encoding.utf8.rawValue) as Any)
+        let task = URLSession.shared.dataTask(with: url) {(data, response, error)
+            in
+        guard let data = data else {
+            
+            print("Fail to retrieve Data")
+            return
+            }
+            
+//            print("The response is : ",String(data: data, encoding: .utf8)!)
+            
+            // Perform Decoding
+            let decoder = JSONDecoder()
+            
+            do {
+                let f1Schedule = try decoder.decode(F1Data.self, from: data)
+                print(f1Schedule)
+            }
+            catch {
+                print(error)
+            }
         }
+            
+        //print(NSString(data: data, encoding: String.Encoding.utf8.rawValue) as Any)
         task.resume()
     }
 }
+
