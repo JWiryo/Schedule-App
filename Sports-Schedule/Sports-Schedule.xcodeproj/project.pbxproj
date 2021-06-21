@@ -59,7 +59,7 @@
 			children = (
 				CBE8A860267C88C5004ECD96 /* Sports-Schedule-Playground.playground */,
 				CBE8A861267C8C99004ECD96 /* Model */,
-				CBE8A85D267C8394004ECD96 /* API_Callers */,
+				CBE8A85D267C8394004ECD96 /* Controller */,
 				CBE8A84E267B4E87004ECD96 /* Sports_ScheduleApp.swift */,
 				CBE8A850267B4E87004ECD96 /* ContentView.swift */,
 				CBE8A852267B4E8D004ECD96 /* Assets.xcassets */,
@@ -77,12 +77,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		CBE8A85D267C8394004ECD96 /* API_Callers */ = {
+		CBE8A85D267C8394004ECD96 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				CBE8A85E267C83B5004ECD96 /* F1_API_Caller.swift */,
 			);
-			path = API_Callers;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		CBE8A861267C8C99004ECD96 /* Model */ = {

@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
+    
+    @ObservedObject var f1ScheduleCaller = F1ScheduleCaller()
+    
+        var body: some View {
+            NavigationView {
+                VStack {
+                    List(f1ScheduleCaller.raceSchedule) { schedule in
+                        Text(schedule.raceName)
+                    }
+            }
+            .navigationTitle("F1 Schedules")
         }
     }
 }

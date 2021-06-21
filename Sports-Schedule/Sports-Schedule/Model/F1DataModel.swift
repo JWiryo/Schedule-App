@@ -19,10 +19,11 @@ struct Races: Codable {
     var Races: [Race]
 }
 
-struct Race: Codable {
+struct Race: Codable, Identifiable {
     
-    var raceName: String
+    var id: Int { Int(round)! }
     var round: String
+    var raceName: String
     var date: String
     var time: String
 }

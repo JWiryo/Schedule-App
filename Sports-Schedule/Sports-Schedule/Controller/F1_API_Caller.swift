@@ -7,12 +7,14 @@
 
 import Foundation
 
-class F1ScheduleCaller {
+class F1ScheduleCaller: ObservableObject {
     
-    func getCurrentSeason() {
+    @Published var raceSchedule = [Race]()
+    
+    init() {
         
         // '!' here means it will never be empty
-        let url = URL(string: "http://ergast.com/api/f1/current.json")!
+        let url = URL(string: "https://ergast.com/api/f1/current.json")!
 
         let task = URLSession.shared.dataTask(with: url) {(data, response, error)
             in
@@ -22,21 +24,26 @@ class F1ScheduleCaller {
             return
             }
             
-//            print("The response is : ",String(data: data, encoding: .utf8)!)
-            
             // Perform Decoding
             let decoder = JSONDecoder()
             
             do {
+                print("Reached here")
                 let f1Schedule = try decoder.decode(F1Data.self, from: data)
-                print(f1Schedule)
+                DispatchQueue.main.async {
+                    for desc in f1Schedule.MRData.RaceTable.Races {
+                        self.raceSchedule.append(desc)
+                    }
+                    print(self.raceSchedule)
+                }
             }
             catch {
+                print("This is error")
                 print(error)
             }
         }
-            
-        //print(NSString(data: data, encoding: String.Encoding.utf8.rawValue) as Any)
+        
+        // Fire off the request
         task.resume()
     }
 }
