@@ -15,8 +15,13 @@ struct ContentView: View {
             NavigationView {
                 VStack {
                     List(f1ScheduleCaller.raceSchedule) { schedule in
-                        Text(schedule.raceName)
+                        HStack {
+                            Text(schedule.raceName)
+                            Spacer()
+                            Image(systemName: "star")
+                        }
                     }
+                    .listStyle(InsetListStyle())
             }
             .navigationTitle("F1 Schedules")
         }

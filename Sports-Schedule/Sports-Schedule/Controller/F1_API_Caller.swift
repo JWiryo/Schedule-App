@@ -28,7 +28,6 @@ class F1ScheduleCaller: ObservableObject {
             let decoder = JSONDecoder()
             
             do {
-                print("Reached here")
                 let f1Schedule = try decoder.decode(F1Data.self, from: data)
                 DispatchQueue.main.async {
                     for desc in f1Schedule.MRData.RaceTable.Races {
@@ -38,7 +37,6 @@ class F1ScheduleCaller: ObservableObject {
                 }
             }
             catch {
-                print("This is error")
                 print(error)
             }
         }
