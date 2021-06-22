@@ -16,14 +16,25 @@ struct ContentView: View {
                 VStack {
                     List(f1ScheduleCaller.raceSchedule) { schedule in
                         HStack {
-                            Text(schedule.raceName)
+                            VStack(alignment: .leading) {
+                                Text(schedule.raceName)
+                                    .font(.title)
+                                VStack(alignment: .leading) {
+                                    Text(schedule.date)
+                                        .font(.subheadline)
+                                        .foregroundColor(Color.gray)
+                                    Text(schedule.time)
+                                        .font(.subheadline)
+                                        .foregroundColor(Color.gray)
+                                }
+                            }
                             Spacer()
                             Image(systemName: "star")
                         }
                     }
                     .listStyle(InsetListStyle())
             }
-            .navigationTitle("F1 Schedules")
+            .navigationTitle("Upcoming F1 Races")
         }
     }
 }

@@ -30,8 +30,30 @@ class F1ScheduleCaller: ObservableObject {
             do {
                 let f1Schedule = try decoder.decode(F1Data.self, from: data)
                 DispatchQueue.main.async {
-                    for desc in f1Schedule.MRData.RaceTable.Races {
-                        self.raceSchedule.append(desc)
+                    for var desc in f1Schedule.MRData.RaceTable.Races {
+                        
+                        // Combine Date and Time
+                        let isoCurrentScheduleDateTime = desc.date + "T" + desc.time
+                        
+                        // Initialise Formatter
+                        let dateFormatter = ISO8601DateFormatter()
+                        dateFormatter.timeZone = TimeZone.current
+                        
+                        // Convert to DateTime Type
+                        let dateTime = dateFormatter.date(from:isoCurrentScheduleDateTime)!
+                        
+                        // Append Race Data into List if has not happened
+                        let currentDate = Date()
+                        if(currentDate < dateTime) {
+                            
+                            // Update Date and Time in Schedule
+                            let dateTimeString = dateFormatter.string(from: dateTime)
+                            desc.date = dateTimeString.components(separatedBy: "T")[0]
+                            desc.time = dateTimeString.components(separatedBy: "T")[1].components(separatedBy: "+")[0]
+                            
+                            // Append to List
+                            self.raceSchedule.append(desc)
+                        }
                     }
                     print(self.raceSchedule)
                 }
