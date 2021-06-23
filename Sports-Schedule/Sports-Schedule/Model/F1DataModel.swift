@@ -26,4 +26,14 @@ struct Race: Codable, Identifiable {
     var raceName: String
     var date: String
     var time: String
+    var Circuit: CircuitData
 }
+
+struct CircuitData: Codable {
+    var Location: LocationData
+}
+
+struct LocationData: Codable {
+    var country: String
+}
+

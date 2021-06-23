@@ -16,9 +16,14 @@ struct ContentView: View {
                 VStack {
                     List(f1ScheduleCaller.raceSchedule) { schedule in
                         HStack {
+                            Image(schedule.Circuit.Location.country)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .cornerRadius(/*@START_MENU_TOKEN@*/5.0/*@END_MENU_TOKEN@*/)
+                                .frame(width: 50, height: 50, alignment: .center)
                             VStack(alignment: .leading) {
                                 Text(schedule.raceName)
-                                    .font(.title)
+                                    .font(.callout)
                                 VStack(alignment: .leading) {
                                     Text(schedule.date)
                                         .font(.subheadline)
