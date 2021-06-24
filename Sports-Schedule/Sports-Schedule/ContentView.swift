@@ -9,14 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     
+    // Instantiate Variables, Classes and Structs
+    @State var isClicked = false
     @ObservedObject var f1ScheduleCaller = F1ScheduleCaller()
+    let userNotificationInst = UserNotification()
     
+    // On App Launch
     init() {
+        
         // Request User Notification Permission on App Launch
-        let userNotificationInst = UserNotification()
         userNotificationInst.requestNotifPermission()
     }
     
+    // Generate View
     var body: some View {
         NavigationView {
             VStack {
@@ -40,7 +45,16 @@ struct ContentView: View {
                             }
                         }
                         Spacer()
-                        Image(systemName: "star")
+                        Button(action: {
+                            
+                            // Schedule local notification when button is pressed
+                            isClicked.toggle()
+                            userNotificationInst.sendRaceScheduleNotification()
+                        }) {
+                            
+                            // Change image when button is pressed
+                            Image(systemName: self.isClicked == true ? "bell.fill" : "bell")
+                        }
                     }
                 }
                 .listStyle(InsetListStyle())
