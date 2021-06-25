@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB22176D2684721300556EA5 /* UserNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB22176C2684721300556EA5 /* UserNotification.swift */; };
+		CB22176D2684721300556EA5 /* UserNotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB22176C2684721300556EA5 /* UserNotificationViewModel.swift */; };
 		CBE8A84F267B4E87004ECD96 /* Sports_ScheduleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE8A84E267B4E87004ECD96 /* Sports_ScheduleApp.swift */; };
 		CBE8A851267B4E87004ECD96 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE8A850267B4E87004ECD96 /* ContentView.swift */; };
 		CBE8A853267B4E8D004ECD96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBE8A852267B4E8D004ECD96 /* Assets.xcassets */; };
@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CB22176C2684721300556EA5 /* UserNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotification.swift; sourceTree = "<group>"; };
+		CB22176C2684721300556EA5 /* UserNotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotificationViewModel.swift; sourceTree = "<group>"; };
 		CBE8A84B267B4E87004ECD96 /* Sports-Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sports-Schedule.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE8A84E267B4E87004ECD96 /* Sports_ScheduleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sports_ScheduleApp.swift; sourceTree = "<group>"; };
 		CBE8A850267B4E87004ECD96 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 		CB22176B268471CC00556EA5 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
-				CB22176C2684721300556EA5 /* UserNotification.swift */,
+				CB22176C2684721300556EA5 /* UserNotificationViewModel.swift */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -175,7 +175,7 @@
 			files = (
 				CBE8A85F267C83B5004ECD96 /* F1ViewModel.swift in Sources */,
 				CBE8A851267B4E87004ECD96 /* ContentView.swift in Sources */,
-				CB22176D2684721300556EA5 /* UserNotification.swift in Sources */,
+				CB22176D2684721300556EA5 /* UserNotificationViewModel.swift in Sources */,
 				CBE8A84F267B4E87004ECD96 /* Sports_ScheduleApp.swift in Sources */,
 				CBE8A863267C8CE9004ECD96 /* F1DataModel.swift in Sources */,
 			);

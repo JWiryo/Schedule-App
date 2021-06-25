@@ -8,7 +8,7 @@
 import Foundation
 import UserNotifications
 
-struct UserNotification {
+struct UserNotificationViewModel {
     
     // Use Provisional notification option if needed
 //    let notifOptions = [.alert, .badge, .sound, .provisional]
@@ -35,14 +35,26 @@ struct UserNotification {
         }
     }
     
-    func sendRaceScheduleNotification() {
+    func sendRaceScheduleNotification(raceDate: String, raceTime: String, raceName: String) {
         let notifContent = UNMutableNotificationContent()
-        notifContent.title = "Race Schedule"
-        notifContent.subtitle = "Test Subtitle"
+        notifContent.title = raceName + " is starting!"
+        notifContent.subtitle = "It's lights out and away we go!"
         notifContent.sound = UNNotificationSound.default
 
-        // Show this notification five seconds from now
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        // [Testing] Show this notification five seconds from now
+//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        // Convert String to Time
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        
+        // Convert Date to DateComponent
+        let dateForNotif = dateFormatter.date(from: raceDate + "T" + raceTime)
+        let dateForNotifComps = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: dateForNotif!)
+        
+        // Show notification on race time
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateForNotifComps, repeats: false)
 
         // Choose a random identifier
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: notifContent, trigger: trigger)
