@@ -11,7 +11,7 @@ struct ContentView: View {
     
     // Instantiate Variables, Classes and Structs
     @State var isClicked = false
-    @ObservedObject var f1ScheduleCaller = F1ScheduleCaller()
+    @ObservedObject var f1ScheduleCaller = F1ViewModel()
     let userNotificationInst = UserNotification()
     
     // On App Launch
@@ -25,21 +25,22 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                List(f1ScheduleCaller.raceSchedule) { schedule in
+                let raceSchedules = f1ScheduleCaller.raceSchedule
+                List(raceSchedules.indices, id: \.self) { idx in
                     HStack {
-                        Image(schedule.Circuit.Location.country)
+                        Image(raceSchedules[idx].Circuit.Location.country)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .cornerRadius(/*@START_MENU_TOKEN@*/5.0/*@END_MENU_TOKEN@*/)
                             .frame(width: 50, height: 50, alignment: .center)
                         VStack(alignment: .leading) {
-                            Text(schedule.raceName)
+                            Text(raceSchedules[idx].raceName)
                                 .font(.callout)
                             VStack(alignment: .leading) {
-                                Text(schedule.date)
+                                Text(raceSchedules[idx].date)
                                     .font(.subheadline)
                                     .foregroundColor(Color.gray)
-                                Text(schedule.time)
+                                Text(raceSchedules[idx].time)
                                     .font(.subheadline)
                                     .foregroundColor(Color.gray)
                             }
@@ -48,12 +49,12 @@ struct ContentView: View {
                         Button(action: {
                             
                             // Schedule local notification when button is pressed
-                            isClicked.toggle()
+                            f1ScheduleCaller.toggleNotifSign(index: idx)
                             userNotificationInst.sendRaceScheduleNotification()
                         }) {
                             
                             // Change image when button is pressed
-                            Image(systemName: self.isClicked == true ? "bell.fill" : "bell")
+                            Image(systemName: raceSchedules[idx].isNotifClicked == true ? "bell.fill" : "bell")
                         }
                     }
                 }

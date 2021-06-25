@@ -21,12 +21,21 @@ struct Races: Codable {
 
 struct Race: Codable, Identifiable {
     
-    var id: Int { Int(round)! }
+    let id = UUID()
     var round: String
     var raceName: String
     var date: String
     var time: String
     var Circuit: CircuitData
+    var isNotifClicked = false
+    
+    enum CodingKeys: String, CodingKey {
+        case round
+        case raceName
+        case date
+        case time
+        case Circuit
+    }
 }
 
 struct CircuitData: Codable {

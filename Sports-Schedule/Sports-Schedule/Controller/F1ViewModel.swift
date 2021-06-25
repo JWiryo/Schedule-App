@@ -7,7 +7,7 @@
 
 import Foundation
 
-class F1ScheduleCaller: ObservableObject {
+class F1ViewModel: ObservableObject {
     
     @Published var raceSchedule = [Race]()
     
@@ -65,6 +65,10 @@ class F1ScheduleCaller: ObservableObject {
         
         // Fire off the request
         task.resume()
+    }
+    
+    func toggleNotifSign(index: Int) -> Void {
+        raceSchedule[index].isNotifClicked.toggle()
     }
 }
 
