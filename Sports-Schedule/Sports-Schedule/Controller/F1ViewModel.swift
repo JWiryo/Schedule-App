@@ -10,6 +10,7 @@ import Foundation
 class F1ViewModel: ObservableObject {
     
     @Published var raceSchedule = [Race]()
+    @Published var pastRaceSchedule = [Race]()
     
     init() {
         
@@ -46,13 +47,17 @@ class F1ViewModel: ObservableObject {
                         let currentDate = Date()
                         if(currentDate < dateTime) {
                             
-                            // Update Date and Time in Schedule
-                            let dateTimeString = dateFormatter.string(from: dateTime)
-                            desc.date = dateTimeString.components(separatedBy: "T")[0]
-                            desc.time = dateTimeString.components(separatedBy: "T")[1].components(separatedBy: "+")[0]
+                            self.updateDateTimeLocalTime(dateFormatter, dateTime, &desc)
                             
-                            // Append to List
+                            // Append to Upcoming Schedule List
                             self.raceSchedule.append(desc)
+                        }
+                        else {
+                            
+                            self.updateDateTimeLocalTime(dateFormatter, dateTime, &desc)
+                            
+                            // Append to Upcoming Schedule List
+                            self.pastRaceSchedule.append(desc)
                         }
                     }
                     print(self.raceSchedule)
@@ -69,6 +74,13 @@ class F1ViewModel: ObservableObject {
     
     func toggleNotifSign(index: Int) -> Void {
         raceSchedule[index].isNotifClicked.toggle()
+    }
+    
+    fileprivate func updateDateTimeLocalTime(_ dateFormatter: ISO8601DateFormatter, _ dateTime: Date, _ desc: inout Race) {
+        // Update Date and Time in Schedule
+        let dateTimeString = dateFormatter.string(from: dateTime)
+        desc.date = dateTimeString.components(separatedBy: "T")[0]
+        desc.time = dateTimeString.components(separatedBy: "T")[1].components(separatedBy: "+")[0]
     }
 }
 

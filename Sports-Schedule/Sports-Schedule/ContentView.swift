@@ -26,6 +26,11 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 let raceSchedules = f1ScheduleCaller.raceSchedule
+                
+                Text("Upcoming")
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                
                 List(raceSchedules.indices, id: \.self) { idx in
                     HStack {
                         Image(raceSchedules[idx].Circuit.Location.country)
@@ -60,10 +65,10 @@ struct ContentView: View {
                     }
                 }
                 .listStyle(InsetListStyle())
+            }
+            .navigationTitle("F1 Races")
         }
-        .navigationTitle("Upcoming F1 Races")
     }
-}
 }
 
 struct ContentView_Previews: PreviewProvider {
