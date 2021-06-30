@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		CB22176D2684721300556EA5 /* UserNotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB22176C2684721300556EA5 /* UserNotificationViewModel.swift */; };
+		CB3278EB268C6BE1002153B8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3278EA268C6BE1002153B8 /* MainView.swift */; };
+		CB3278ED268C6D48002153B8 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3278EC268C6D48002153B8 /* LeaderboardView.swift */; };
 		CBE8A84F267B4E87004ECD96 /* Sports_ScheduleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE8A84E267B4E87004ECD96 /* Sports_ScheduleApp.swift */; };
-		CBE8A851267B4E87004ECD96 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE8A850267B4E87004ECD96 /* ContentView.swift */; };
+		CBE8A851267B4E87004ECD96 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE8A850267B4E87004ECD96 /* ScheduleView.swift */; };
 		CBE8A853267B4E8D004ECD96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBE8A852267B4E8D004ECD96 /* Assets.xcassets */; };
 		CBE8A856267B4E8D004ECD96 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBE8A855267B4E8D004ECD96 /* Preview Assets.xcassets */; };
 		CBE8A85F267C83B5004ECD96 /* F1ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE8A85E267C83B5004ECD96 /* F1ViewModel.swift */; };
@@ -18,9 +20,11 @@
 
 /* Begin PBXFileReference section */
 		CB22176C2684721300556EA5 /* UserNotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotificationViewModel.swift; sourceTree = "<group>"; };
+		CB3278EA268C6BE1002153B8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CB3278EC268C6D48002153B8 /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 		CBE8A84B267B4E87004ECD96 /* Sports-Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sports-Schedule.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE8A84E267B4E87004ECD96 /* Sports_ScheduleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sports_ScheduleApp.swift; sourceTree = "<group>"; };
-		CBE8A850267B4E87004ECD96 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CBE8A850267B4E87004ECD96 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		CBE8A852267B4E8D004ECD96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBE8A855267B4E8D004ECD96 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CBE8A857267B4E8D004ECD96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +52,16 @@
 			path = Notification;
 			sourceTree = "<group>";
 		};
+		CB3278E9268C6BA5002153B8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CB3278EA268C6BE1002153B8 /* MainView.swift */,
+				CBE8A850267B4E87004ECD96 /* ScheduleView.swift */,
+				CB3278EC268C6D48002153B8 /* LeaderboardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		CBE8A842267B4E87004ECD96 = {
 			isa = PBXGroup;
 			children = (
@@ -68,11 +82,11 @@
 			isa = PBXGroup;
 			children = (
 				CBE8A860267C88C5004ECD96 /* Sports-Schedule-Playground.playground */,
+				CB3278E9268C6BA5002153B8 /* Views */,
 				CBE8A85D267C8394004ECD96 /* Controller */,
 				CB22176B268471CC00556EA5 /* Notification */,
 				CBE8A861267C8C99004ECD96 /* Model */,
 				CBE8A84E267B4E87004ECD96 /* Sports_ScheduleApp.swift */,
-				CBE8A850267B4E87004ECD96 /* ContentView.swift */,
 				CBE8A852267B4E8D004ECD96 /* Assets.xcassets */,
 				CBE8A857267B4E8D004ECD96 /* Info.plist */,
 				CBE8A854267B4E8D004ECD96 /* Preview Content */,
@@ -174,7 +188,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBE8A85F267C83B5004ECD96 /* F1ViewModel.swift in Sources */,
-				CBE8A851267B4E87004ECD96 /* ContentView.swift in Sources */,
+				CB3278EB268C6BE1002153B8 /* MainView.swift in Sources */,
+				CBE8A851267B4E87004ECD96 /* ScheduleView.swift in Sources */,
+				CB3278ED268C6D48002153B8 /* LeaderboardView.swift in Sources */,
 				CB22176D2684721300556EA5 /* UserNotificationViewModel.swift in Sources */,
 				CBE8A84F267B4E87004ECD96 /* Sports_ScheduleApp.swift in Sources */,
 				CBE8A863267C8CE9004ECD96 /* F1DataModel.swift in Sources */,
