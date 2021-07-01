@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>738689269827-21or7pvoo83r9on3mbq5re4s77ifiash.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.738689269827-21or7pvoo83r9on3mbq5re4s77ifiash</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAWInXomt_TZMeDKne2yX7PVsDQiWgzhk4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>738689269827</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>JW.Sports-Schedule</string>
+	<key>PROJECT_ID</key>
+	<string>sports-schedule-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>sports-schedule-app.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:738689269827:ios:791f61ca7a6e8e588c54f6</string>
+</dict>
+</plist>

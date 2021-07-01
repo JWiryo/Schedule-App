@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55AFF3F3E054F836F917658B /* Pods_Sports_Schedule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02CF89CA313F4B9E446D362C /* Pods_Sports_Schedule.framework */; };
 		CB22176D2684721300556EA5 /* UserNotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB22176C2684721300556EA5 /* UserNotificationViewModel.swift */; };
 		CB3278EB268C6BE1002153B8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3278EA268C6BE1002153B8 /* MainView.swift */; };
 		CB3278ED268C6D48002153B8 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3278EC268C6D48002153B8 /* LeaderboardView.swift */; };
+		CBB695FA268DABED00FBAEDC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBB695F9268DABED00FBAEDC /* GoogleService-Info.plist */; };
 		CBE8A84F267B4E87004ECD96 /* Sports_ScheduleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE8A84E267B4E87004ECD96 /* Sports_ScheduleApp.swift */; };
 		CBE8A851267B4E87004ECD96 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE8A850267B4E87004ECD96 /* ScheduleView.swift */; };
 		CBE8A853267B4E8D004ECD96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBE8A852267B4E8D004ECD96 /* Assets.xcassets */; };
@@ -19,9 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02CF89CA313F4B9E446D362C /* Pods_Sports_Schedule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sports_Schedule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		310FB6B4D1804B60AA4A90B5 /* Pods-Sports-Schedule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sports-Schedule.release.xcconfig"; path = "Target Support Files/Pods-Sports-Schedule/Pods-Sports-Schedule.release.xcconfig"; sourceTree = "<group>"; };
+		97C2E0700CB440CFD4BFBE22 /* Pods-Sports-Schedule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sports-Schedule.debug.xcconfig"; path = "Target Support Files/Pods-Sports-Schedule/Pods-Sports-Schedule.debug.xcconfig"; sourceTree = "<group>"; };
 		CB22176C2684721300556EA5 /* UserNotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotificationViewModel.swift; sourceTree = "<group>"; };
 		CB3278EA268C6BE1002153B8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CB3278EC268C6D48002153B8 /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
+		CBB695F9268DABED00FBAEDC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CBE8A84B267B4E87004ECD96 /* Sports-Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sports-Schedule.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE8A84E267B4E87004ECD96 /* Sports_ScheduleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sports_ScheduleApp.swift; sourceTree = "<group>"; };
 		CBE8A850267B4E87004ECD96 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
@@ -38,12 +44,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55AFF3F3E054F836F917658B /* Pods_Sports_Schedule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04D01B21F16DEB0F75372781 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97C2E0700CB440CFD4BFBE22 /* Pods-Sports-Schedule.debug.xcconfig */,
+				310FB6B4D1804B60AA4A90B5 /* Pods-Sports-Schedule.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AB5BF96888593D3A1EF1F9D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02CF89CA313F4B9E446D362C /* Pods_Sports_Schedule.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CB22176B268471CC00556EA5 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +92,8 @@
 			children = (
 				CBE8A84D267B4E87004ECD96 /* Sports-Schedule */,
 				CBE8A84C267B4E87004ECD96 /* Products */,
+				04D01B21F16DEB0F75372781 /* Pods */,
+				AB5BF96888593D3A1EF1F9D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +116,7 @@
 				CBE8A84E267B4E87004ECD96 /* Sports_ScheduleApp.swift */,
 				CBE8A852267B4E8D004ECD96 /* Assets.xcassets */,
 				CBE8A857267B4E8D004ECD96 /* Info.plist */,
+				CBB695F9268DABED00FBAEDC /* GoogleService-Info.plist */,
 				CBE8A854267B4E8D004ECD96 /* Preview Content */,
 			);
 			path = "Sports-Schedule";
@@ -125,9 +153,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBE8A85A267B4E8D004ECD96 /* Build configuration list for PBXNativeTarget "Sports-Schedule" */;
 			buildPhases = (
+				1F6BA043BBA9C696C7AC7071 /* [CP] Check Pods Manifest.lock */,
 				CBE8A847267B4E87004ECD96 /* Sources */,
 				CBE8A848267B4E87004ECD96 /* Frameworks */,
 				CBE8A849267B4E87004ECD96 /* Resources */,
+				7B53075F14A3152B0FB5EB1D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,10 +207,53 @@
 			files = (
 				CBE8A856267B4E8D004ECD96 /* Preview Assets.xcassets in Resources */,
 				CBE8A853267B4E8D004ECD96 /* Assets.xcassets in Resources */,
+				CBB695FA268DABED00FBAEDC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F6BA043BBA9C696C7AC7071 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sports-Schedule-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B53075F14A3152B0FB5EB1D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sports-Schedule/Pods-Sports-Schedule-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sports-Schedule/Pods-Sports-Schedule-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sports-Schedule/Pods-Sports-Schedule-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CBE8A847267B4E87004ECD96 /* Sources */ = {
@@ -318,6 +391,7 @@
 		};
 		CBE8A85B267B4E8D004ECD96 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97C2E0700CB440CFD4BFBE22 /* Pods-Sports-Schedule.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -340,6 +414,7 @@
 		};
 		CBE8A85C267B4E8D004ECD96 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 310FB6B4D1804B60AA4A90B5 /* Pods-Sports-Schedule.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
