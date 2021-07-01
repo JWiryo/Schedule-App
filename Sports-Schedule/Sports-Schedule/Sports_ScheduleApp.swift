@@ -6,9 +6,17 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct Sports_ScheduleApp: App {
+    
+    init() {
+        
+        // Init Firebase
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
             MainView()
